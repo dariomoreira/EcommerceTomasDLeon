@@ -1,0 +1,25 @@
+<div class="row text-left padding">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+            <h2 class="display-4">Iniciar Sesion</h2>
+            <p class="lead">
+		#if ($error)
+                    <div class="alert alert-danger" role="alert">
+			$error
+                    </div>
+		#end
+
+		<form id="formulario">
+                    <div class="form-group">
+                                    <label for="Username">Nombre de Usuario</label>
+                                    <input type="text" class="form-control input-sm" id="username" value="$!{request.queryParams('Nombre')}" name="username" placeholder="Usuario">    
+                    </div>
+
+                    <div class="form-group">
+                                    <label for="Password">Contraseña</label>
+                                    <input type="password" class="form-control input-sm" id="pass"  name="pass" placeholder="Contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Loguearse</button>
+		</form>
+            </p>
+    </div>
+</div>
